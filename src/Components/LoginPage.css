@@ -1,0 +1,115 @@
+.mainDiv{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.headerDiv{
+    height: 10%;
+    width: 100%;
+}
+.formContainer2{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.formDiv2{
+    width: 40%;
+    height: 60%;
+    background: #b9b999;
+    padding: 30px;
+    border-radius: 15px;
+}
+.usernameDiv{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.usernameDiv label{
+    height: 30%;
+    padding: 5px;
+}
+.usernameDiv input{
+    margin: 5px;
+    height: 30%;
+}
+.usernameDiv span{
+    height: 30%;
+    padding: 5px;
+    -webkit-text-fill-color: red;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.passwordDiv{
+    height: 30%;
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.passwordDiv label{
+    height: 30%;
+    padding: 5px;
+}
+.passwordDiv input{
+    margin: 5px;
+    height: 30%;
+}
+.passwordDiv span{
+    height: 30%;
+    padding: 5px;
+    -webkit-text-fill-color: red;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.bottom{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.bottom a{
+    height: 100%;
+    width: 30%;
+}
+.bottom button{
+    background-color: black;
+    -webkit-text-fill-color: white;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+@media (max-width: 1060px){
+    .formDiv2 {
+        width: 50%;
+    }
+}
+
+@media (max-width: 960px){
+    .formDiv2 {
+        width: 50%;
+    }
+}
+@media (max-width: 640px){
+    .formDiv2 {
+        width: 60%;
+    }
+}
+@media (max-width: 480px){
+    .formDiv2 {
+        width: 90%;
+    }
+}

@@ -1,0 +1,111 @@
+.viewFormContainer{
+    position: fixed;
+    top: 20%;
+    left: 30%;
+    z-index: 100;
+    border-radius: 15px;
+    height: 60%;
+    width: 35%;
+    overflow: auto;
+}
+.footer{
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    -webkit-text-fill-color: black;
+    font-weight: bold;
+}
+.footer button{
+    background: black;
+    height: 75%;
+    width: 100%;
+    -webkit-text-fill-color: white;
+    font-weight: bold;
+    border-radius: 6px;
+}
+.footer button:hover{
+    background-color: rgb(177, 177, 177);
+    -webkit-text-fill-color: black;
+    font-weight: bold;
+}
+.productDataDiv{
+    height: auto;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    background-color: white;
+}
+
+.imageDiv{
+    height: 80%;
+    width: 60%;
+    padding: 10px;
+}
+.imageDiv img{
+    height: 100%;
+    width: 100%;
+}
+.productDetailDiv{
+    height: 70%;
+    width: 40%;
+}
+.productDetailDiv p{
+    word-wrap: break-word;
+}
+.saveDiv{
+    height: 100%;
+    width: 30%;
+}
+.closeDiv{
+    height: 100%;
+    width: 30%;
+}
+
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px)   {
+    .viewFormContainer {
+        left: 10%;
+        width: 80%;
+    }
+    .closeDiv {
+        width: 35%;
+    }
+    .saveDiv{
+        width: 35%;
+    }
+}
+
+@media (max-width: 760px){
+    .viewFormContainer {
+        width: 48%;
+    }
+}
+@media (max-width: 640px){
+    .viewFormContainer {
+        width: 54%;
+        left: 23%;
+    }
+    .productDataDiv{
+        flex-direction: column;
+    }
+    .imageDiv {
+        width: 100%;
+    }
+    .imageDiv img{
+        width: 90%;
+    }
+    .productDetailDiv{
+        width: 100%;
+    }
+}
+
+
+
+
+@media (max-width: 480px){
+    .viewFormContainer {
+        width: 70%;
+        left: 15%;
+    }
+}

@@ -1,0 +1,227 @@
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.75);
+
+}
+.addFormContainer{
+    position: fixed;
+    top: 10%;
+    left: 35%;
+    z-index: 100;
+    border-radius: 15px;
+    height: 80%;
+    width: 30%;
+    overflow: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.formContainer{
+    height: 100%;
+    width: 100%;
+}
+.headerDiv{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    -webkit-text-fill-color: white;
+}
+.headerDiv h3{
+    margin: 0;
+}
+
+.dataDiv{
+    height: 80%;
+    width: 100%;
+    padding: 20px;
+   background-color: white;
+}
+.footDiv{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+
+}
+.footerDiv{
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90%;
+    -webkit-text-fill-color: black;
+    font-weight: bold;
+}
+.addBtn{
+    height: 90%;
+    width: 40%;
+    border-radius: 10px;
+    font-weight: bold;
+    background: black;
+    -webkit-text-fill-color: white;
+}
+.addBtn:hover{
+    background-color: #ccc6c6;
+    -webkit-text-fill-color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+.cancelBtn{
+    height: 90%;
+    width: 40%;
+    border-radius: 10px;
+    font-weight: bold;
+    background: black;
+    -webkit-text-fill-color: white;
+}
+.cancelBtn:hover{
+    background-color: #ccc6c6;
+    -webkit-text-fill-color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+.pId{
+    height: 20%;
+    width: 100%;
+}
+.pId label{
+    -webkit-text-fill-color: black;
+    height: 100%;
+    width: 50%;
+}
+.formContainer input{
+    height: 60%;
+    width: 80%;
+}
+.pName{
+    height: 20%;
+    width: 100%;
+}
+.pName label{
+    -webkit-text-fill-color: black;
+    height: 100%;
+}
+.pQ{
+    height: 20%;
+    width: 100%;
+}
+.pQ label{
+    -webkit-text-fill-color:  black;
+}
+.pPrize{
+    height: 20%;
+    width: 100%;
+}
+.pPrize label{
+    -webkit-text-fill-color: black;
+}
+.pImage{
+    height: 20%;
+    width: 100%;
+}
+.pImage label{
+    -webkit-text-fill-color: black;
+}
+.errorMsg{
+    -webkit-text-fill-color: red;
+    height: 10%;
+}
+.errorMsg p{
+    margin: 0px;
+}
+.idLabel{
+    height: 30%;
+}
+.idInput{
+    height: 30%;
+}
+.idInput input{
+    height: 100%;
+}
+.error{
+    height: 30%;
+}
+.nameLabel{
+    height: 30%;
+}
+.nameInput{
+    height: 30%;
+}
+.nameInput input{
+    height: 100%;
+}
+
+.quantityLabel{
+    height: 30%;
+}
+.quantityInput{
+    height: 30%;
+}
+.quantityInput input{
+    height: 100%;
+}
+
+.prizeLabel{
+    height: 30%;
+}
+.prizeInput{
+    height: 30%;
+}
+.prizeInput input{
+    height: 100%;
+}
+
+.imageLabel{
+    height: 30%;
+}
+.imageInput{
+    height: 30%;
+}
+.imageInput input{
+    height: 100%;
+}
+
+
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px)   {
+    .addFormContainer {
+        left: 15%;
+        width: 70%;
+    }
+}
+@media (max-width: 1060px){
+    .addFormContainer {
+        left: 25%;
+        width: 50%;
+    }
+}
+
+@media (max-width: 960px){
+    .addFormContainer {
+        left: 20%;
+        width: 60%;
+    }
+}
+@media (max-width: 640px){
+    .addFormContainer {
+        left:15%;
+        width: 70%;
+    }
+}
+
+
+@media (max-width: 480px){
+    .addFormContainer {
+        left: 5%;
+        width: 90%;
+    }
+}
