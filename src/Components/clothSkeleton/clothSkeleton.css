@@ -1,0 +1,85 @@
+.first{
+    height: 100%;
+    width: 100%;
+}
+.displayCenterRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+.appJsContainer{
+    height: 100%;
+    width: 100%;
+}
+
+.appNameButtonHeader{
+    height: 10%;
+    width: 100%;
+    background: black;
+    -webkit-text-fill-color: white;
+}
+
+.appLogo{
+    height: 100%;
+    width: 20%;
+}
+
+.appLogo img{
+    height: 100%;
+    width: 35%;
+    border-radius: 21px;
+}
+
+.appName{
+    height: 100%;
+    width: 50%;
+}
+
+.addProduct{
+    height: 100%;
+    width: 30%;
+    -webkit-text-fill-color: black;
+    font-weight: bold;
+}
+.addProduct button{
+    height: 80%;
+    border-radius: 10px;
+    width: 50%;
+    -webkit-text-fill-color: black;
+    font-weight: bold;
+    background-color: aliceblue;
+}
+.addProduct button:hover{
+    background-color: rgb(78, 78, 78);
+    -webkit-text-fill-color: white;
+    cursor: pointer;
+}
+.addProduct a{
+    height: 80%;
+    width: 50%;
+}
+.addProduct a button{
+    height: 100%;
+    width: 100%;
+}
+.formDiv{
+    height: 50%;
+    background: rgb(88, 86, 86);
+    width: 75%;
+    box-shadow: 10px 10px 8px #302f2f;
+    -webkit-text-fill-color: white;
+    border-radius: 20px;
+}
+.displayProducts{
+    height: 87%;
+    width: 100%;
+}
+
+
+@media (max-width: 480px){
+    .addProduct {
+        width: 26%;
+    }
+}

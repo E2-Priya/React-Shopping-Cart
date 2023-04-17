@@ -1,4 +1,10 @@
-export const isOn = (state = false, action) => {
+let loading
+if(JSON.parse(localStorage.getItem('user')) !== null ){
+  loading = true
+}else{
+  loading = false
+}
+export const isOn = (state = loading , action) => {
     console.log('isOn in reducers')
     console.log(action.type)
     switch(action.type){

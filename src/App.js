@@ -1,40 +1,22 @@
-import ClothSkeleton from "./Components/clothSkeleton"
+import ClothSkeleton from "./Components/clothSkeleton/clothSkeleton";
 import { createBrowserRouter } from "react-router-dom";
 import { RouterProvider } from "react-router-dom";
-import LoginPage from "./Components/LoginPage";
-import {useSelector} from 'react-redux'
-import { Navigate } from 'react-router-dom';
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { isOn } from "./Actions/On";
-import { isOff } from "./Actions/Off";
+import LoginPage from "./Components/LoginPage/LoginPage";
+import { useSelector } from "react-redux";
+import { Navigate } from "react-router-dom";
+
 function App() {
-  const dispatch = useDispatch();
-  const authenticated = useSelector((state) => state.isOn)
-  console.log(authenticated)
-  useEffect(() =>{
-    const userFromLocalStorage = JSON.parse(localStorage.getItem('user'))
-    console.log(userFromLocalStorage)
-    if(userFromLocalStorage !== null ){
-      dispatch(isOn())
-    }else{
-      dispatch(isOff())
-    }
-  })
-
-
-  const view = useSelector((state) => state.isView )
-  console.log(view)
+  const authenticated = useSelector((state) => state.isOn);
+  console.log(authenticated);
   const router = createBrowserRouter([
-    { path :'/login' ,element : <LoginPage/>},
+    { path: "/login", element: authenticated ? <Navigate to="/dashBoard" /> : <LoginPage/>},
 
-    { path : '/dashBoard' , element :  authenticated ? <ClothSkeleton/> : <Navigate  to="/login" />  }
-  ])
-  return (
-
-     <RouterProvider router={router}></RouterProvider>
-
-  );
+    {
+      path: "/dashBoard",
+      element: authenticated ? <ClothSkeleton /> : <Navigate to="/login" />,
+    },
+  ]);
+  return <RouterProvider router={router}></RouterProvider>;
 }
 
 export default App;

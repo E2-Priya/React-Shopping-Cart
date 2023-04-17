@@ -3,7 +3,7 @@ import { obj } from "../Components/productDetail";
 export const addRedit = (state = { id: "", name: "", quantity: "", price: "", image: "" , btnValue : "UPDATE" ,prIndex : 0},action) => {
   switch (action.type) {
     case "addProductClicked":
-        console.log('addProduct clicked')
+
         return {  id: "",
                     name: "",
                     quantity: "",
@@ -12,7 +12,7 @@ export const addRedit = (state = { id: "", name: "", quantity: "", price: "", im
                     btnValue : "ADD"
                 };
     case "editProductClicked":
-        console.log('editproduct clicked')
+
         let pr = action.payLoad
         console.log(action.payLoad)
         console.log(pr)
