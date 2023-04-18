@@ -28,16 +28,16 @@ function RenderProducts(){
        setProduct(product)
     }
     return(
-        <div className='div1'>
-        <ul className="ulDiv">
+        <div className='div1' data-testid='div1Render'>
+        <ul className="ulDiv" data-testid='ulDiv'>
         {products.map((product,index) => (
-        <div className='boxDiv'>
-            <div className='productDetaildiv'> <img src={product.image} data-key={product.id}/></div>
-            <div className='prdtName'><h5>{product.name}</h5></div>
+        <div className='boxDiv' data-testid='boxDiv'>
+            <div className='productDetaildiv'> <img data-testid='productImgRender'src={product.image} data-key={product.id}/></div>
+            <div className='prdtName' ><h5 data-testid='productNameRender'>{product.name}</h5></div>
             <div className='buttonDiv'>
                 <button  onClick={
-                    ()=>{handleView(product)}}>VIEW</button>
-                <BiEdit name="edit" tooltip="Edit" size="medium" onClick={() =>handleEdit(product,index)}  data-key={product.id}></BiEdit>
+                    ()=>{handleView(product)}} data-testid='viewBtn'>VIEW</button>
+                <BiEdit name="edit" tooltip="Edit" size="medium" data-testId='editIcon' onClick={() =>handleEdit(product,index)}  data-key={product.id}></BiEdit>
             </div>
         </div>
         ))}

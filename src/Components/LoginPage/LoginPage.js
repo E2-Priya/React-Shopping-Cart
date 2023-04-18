@@ -46,27 +46,27 @@ function LoginPage() {
           console.log(value)
     }
   return (
-    <div className="mainDiv">
+    <div className="mainDiv" data-testid='loginDiv'>
       <header className="headerDiv">
-        <h3> USER LOGIN FORM </h3>
+        <h3 data-testid='loginHeader'> USER LOGIN FORM </h3>
       </header>
 
-      <form className="formContainer2">
+      <form className="formContainer2" data-testid='loginFormContainer'>
         <div className="formDiv2">
           <div className="usernameDiv">
-            <label>User mail id :</label>
-            <input type="mail" onChange={handleDatas} name='username' placeholder="Enter valid Username" />
-            <span>{error.userErr}</span>
+            <label data-testid='userNameLabel'>User mail id :</label>
+            <input data-testid='userNameInput'type="mail" onChange={handleDatas} name='username' placeholder="Enter valid Username" />
+            <span data-testid='userNameErr'>{error.userErr}</span>
           </div>
 
           <div className="passwordDiv">
-            <label>Password :</label>
-            <input type="text" name='password' onChange={handleDatas} placeholder="Enter Password" />
-            <span>{error.passErr}</span>
+            <label data-testid='passWordLabel'>Password :</label>
+            <input data-testid='passWordInput' type="text" name='password' onChange={handleDatas} placeholder="Enter Password" />
+            <span data-testid='passWordErr'>{error.passErr}</span>
           </div>
 
           <div class="bottom">
-          <Link to='/dashBoard'><button type="button" onClick={handleLogin}>LOGIN </button></Link>
+          <Link to='/dashBoard'><button data-testid='loginBtn' type="button" onClick={handleLogin}>LOGIN </button></Link>
           </div>
         </div>
       </form>

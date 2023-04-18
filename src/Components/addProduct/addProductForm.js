@@ -126,7 +126,7 @@ function AddProductForm() {
       ...productDetail,
       [key]: value,
     });
-    console.log(productDetail)
+
   }
 
   function handleFormSubmission(e) {
@@ -176,15 +176,15 @@ function AddProductForm() {
   return (
     <div>
       <div className="backdrop" />
-      <div className="addFormContainer">
-        <form className="formContainer">
+      <div className="addFormContainer" data-testid='addFormCont'>
+        <form className="formContainer" data-testid='formAddProduct'>
           <header className="headerDiv">
-            <h3>ADD YOUR PRODUCT</h3>
+            <h3 data-testid='addProductHeader'>ADD YOUR PRODUCT</h3>
           </header>
           <div className="dataDiv">
             <div className="pId">
               <div className="idLabel">
-                <label>ENTER PRODUCT ID : </label>
+                <label data-testid='prIdLabel'>ENTER PRODUCT ID : </label>
               </div>
               <div className="idInput">
                 <input
@@ -195,17 +195,18 @@ function AddProductForm() {
                   onBlur={validate}
                   onKeyUp={validate}
                   value={pr.id}
+                  data-testid='prIdInput'
                   required
                 ></input>
               </div>
               <div className="error">
                 {" "}
-                <span className="errorMsg">{dataError.idErr}</span>{" "}
+                <span className="errorMsg" data-testid='idErr'>{dataError.idErr}</span>{" "}
               </div>
             </div>
             <div className="pName">
               <div className="nameLabel">
-                <label>ENTER PRODUCT NAME : </label>
+                <label data-testid='prNameLabel'>ENTER PRODUCT NAME : </label>
               </div>
               <div className="nameInput">
                 <input
@@ -216,6 +217,7 @@ function AddProductForm() {
                   onBlur={validate}
                   value={pr.name}
                   onKeyUp={validate}
+                  data-testid='prNameInput'
                   required
                 ></input>
               </div>
@@ -226,7 +228,7 @@ function AddProductForm() {
             </div>
             <div className="pQ">
               <div className="quantityLabel">
-                <label>ENTER QUANTITY : </label>
+                <label data-testid='prQuantityLabel'>ENTER QUANTITY : </label>
               </div>
               <div className="quantityInput">
                 <input
@@ -236,6 +238,7 @@ function AddProductForm() {
                   onBlur={validate}
                   value={pr.quantity}
                   onKeyUp={validate}
+                  data-testid='prQuantityInput'
                   required
                 ></input>
               </div>
@@ -246,7 +249,7 @@ function AddProductForm() {
             </div>
             <div className="pPrize">
               <div className="prizeLabel">
-                <label>ENTER PRODUCT PRICE: </label>
+                <label data-testid='prPriceLabel'>ENTER PRODUCT PRICE: </label>
               </div>
               <div className="prizeInput">
                 <input
@@ -256,17 +259,18 @@ function AddProductForm() {
                   onBlur={validate}
                   onKeyUp={validate}
                   value={pr.price}
+                  data-testid='prPriceInput'
                   required
                 ></input>
               </div>
               <div className="error">
                 {" "}
-                <span className="errorMsg">{dataError.priceErr}</span>{" "}
+                <span className="errorMsg" >{dataError.priceErr}</span>{" "}
               </div>
             </div>
             <div className="pImage">
               <div className="imageLabel">
-                <label>UPLOAD PRODUCT IMAGE: </label>
+                <label data-testid='prImgLabel'>UPLOAD PRODUCT IMAGE: </label>
               </div>
               <div className="imageInput">
                 <input
@@ -276,6 +280,7 @@ function AddProductForm() {
                   value=''
                   onBlur={validate}
                   required
+                  data-testid='prImgInput'
                   accept="image/jpeg, image/png"
                 ></input>
               </div>
@@ -287,7 +292,7 @@ function AddProductForm() {
           </div>
           <div className="footDiv">
             <footer className="footerDiv">
-              <button className="addBtn" onClick={handleFormSubmission}>
+              <button className="addBtn" onClick={handleFormSubmission} data-testid='submitForm'>
                 {pr.btnValue}
               </button>
               <button

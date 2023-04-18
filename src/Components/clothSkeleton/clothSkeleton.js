@@ -5,7 +5,6 @@ import { addProduct } from "../../Actions/AddProducts";
 import AddProductForm from "../addProduct/addProductForm";
 import { addProductClicked } from "../../Actions/addProductClicked";
 import RenderProducts from "../RenderProducts/RenderProducts";
-import { isOn } from "../../Actions/On";
 import { isOff } from "../../Actions/Off";
 import { Link } from "react-router-dom";
 function ClothSkeleton() {
@@ -23,7 +22,7 @@ function ClothSkeleton() {
     dispatch(isOff())
   }
   return (
-    <div className="first">
+    <div className="first" data-testid='firstDiv'>
       {isAddProduct && <AddProductForm></AddProductForm>}
       <div className="appJsContainer">
         <div className="appNameButtonHeader displayCenterRow">
@@ -34,8 +33,8 @@ function ClothSkeleton() {
             <h2 data-testid='appTitle'>CLOTHING APP</h2>
           </div>
           <div className="addProduct displayCenterRow">
-            <button onClick={handleAdd}>ADD PRODUCT</button>
-            <Link to='/login'><button onClick={handleLogout} type="button">LOG OUT </button></Link>
+            <button onClick={handleAdd} data-testid='addProductBtn'>ADD PRODUCT</button>
+            <Link to='/login'><button onClick={handleLogout} type="button" data-testid='logOutBtn'>LOG OUT</button></Link>
           </div>
         </div>
         <div className="displayProducts">

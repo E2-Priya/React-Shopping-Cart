@@ -9,6 +9,7 @@ function App() {
   const authenticated = useSelector((state) => state.isOn);
   console.log(authenticated);
   const router = createBrowserRouter([
+    { path:'/' , element : <Navigate to='/login'/>},
     { path: "/login", element: authenticated ? <Navigate to="/dashBoard" /> : <LoginPage/>},
 
     {

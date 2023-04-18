@@ -9,7 +9,7 @@ function View(props){
     const dispatch = useDispatch();
 
     return(
-        <div>
+        <div data-testid='viewMainDiv'>
         <div className='backdrop'/>
         <div className="viewFormContainer">
             <form className="formContainer">
